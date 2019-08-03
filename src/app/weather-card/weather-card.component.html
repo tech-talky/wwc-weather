@@ -1,0 +1,11 @@
+<div class="card">
+    <div class="card-block">
+        <div class="card-title">
+            {{city.name}}
+        </div>
+        <div class="card-text" *ngIf="weatherReport">
+            {{weatherReport.currently.temperature}}<br>
+            {{weatherReport.currently.apparentTemperature}}<br>
+        </div>
+    </div>
+</div>  
