@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { City } from './models/models';
-import indianCities from '../assets/ind-cities.json';
+import indianCities from '../../assets/ind-cities.json';
 
 @Injectable({
   providedIn: 'root'
