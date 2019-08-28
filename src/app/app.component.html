@@ -3,33 +3,13 @@
     <div class="branding">
       <a href="javascript:void(0)" class="nav-link" style="color: #eee">
         <clr-icon shape="sun"></clr-icon>
-        WWC Weather 
+        WWC Weather
       </a>
     </div>
   </header>
   <div class="content-container" style="background: #eee">
     <div class="content-area">
-      <div class="clr-row full-height">
-        <div class="clr-col-sm-3 full-height">
-          <div class="search-content-holder">
-            <input [(ngModel)]="searchTerm" (ngModelChange)="onSearchTermChanged($event)" class="clr-input city-search-input"/>
-            <div *ngFor="let city of selectedCities" (click)="addToDashboard(city)">
-              <div class="search-result">
-                {{city.name}}<br>
-                <strong>Lat Long: </strong> {{city.lat}}, {{city.lng}}
-              </div>
-              
-            </div>
-          </div>
-
-        </div>
-        <div class="clr-col-sm-9">
-          <div *ngFor="let city of dashboardCities">
-            <app-weather-card [city]="city"></app-weather-card>
-          </div>
-        </div>
-      </div>
+      <router-outlet></router-outlet>
     </div>
   </div>
-
 </div>
