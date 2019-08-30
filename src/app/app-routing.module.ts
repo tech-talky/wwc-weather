@@ -4,7 +4,8 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: '', redirectTo: 'weather-status', pathMatch: 'full' },
-  { path: 'weather-status', loadChildren: './weather-status/weather-status.module#WeatherStatusModule' }
+  { path: 'weather-status', loadChildren: './weather-status/weather-status.module#WeatherStatusModule' },
+  { path: 'forecasting', loadChildren: './forecasting/forecasting.module#ForecastingModule' }
 ];
 
 @NgModule({

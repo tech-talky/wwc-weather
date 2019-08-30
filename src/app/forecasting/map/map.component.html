@@ -1,0 +1,20 @@
+<div style="display:flex; flex-direction:row; justify-content: space-around; ">
+  <agm-map 
+    [latitude]="20.5937" 
+    [longitude]="78.9629" 
+    [zoom]="4"
+    [disableDefaultUI]="false" 
+    [zoomControl]="false"
+    (mapClick)="mapClicked($event)"
+    style="height:500px;width:500px">
+
+    <agm-marker *ngFor="let marker of markers; let i = index"
+      [latitude]="marker.latitude"
+      [longitude]="marker.longitude"
+      (markerClick)="clickedMarker(marker, i)"
+      [markerDraggable]="marker.draggable"
+      (dragEnd)="markerDragEnd(m, $event)">
+    </agm-marker>
+    
+  </agm-map>
+</div>
